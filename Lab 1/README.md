@@ -260,7 +260,7 @@ Goal 3: To make the kitchen cleaner and remove stains if possible
 Activity 4: Using emotion detection to integrate an inspiring quote generator  
 Goal 4: To heal people’s daily feelings
 
-Activity 5: Feet odor detection rug
+Activity 5: Feet odor detection rug  
 Goal 5: To remind you it’s time to wash your feet and avoid the awkward scenario  
 
 Activity 6: A tone detector to identify the extent of politeness for each sentence you speak  
