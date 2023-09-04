@@ -311,12 +311,14 @@ To discriminate the nutrition of the dish on the table and show the red light if
 
 \*\***Include pictures of your storyboards here**\*\*
 
-\*\***Summarize feedback you got here.**\*\*
-
+\*\***Summarize feedback you got here.**\*\*  
+The idea of the smart table is great, but preferably you would want to have this feature before preparing the meal, otherwise you would be wasting the meal if you didn't end up eating it based on the nutrition information.
+The tone detector and emotion detectors are really creative ideas.
+The feet odor detector mat could possibly include a self-cleaning mechanism, or else the mat might be filled with odor after prolonged use.
 
 ## Part B. Act out the Interaction
-**Are there things that seemed better on paper than acted out?**
-
+**Are there things that seemed better on paper than acted out?**  
+The foot odor detector seemed better on paper than acted out, because in order for it to be able to properly sense the odor, the user would have to stand on it for a short while, and this may be inconvenient and time-consuming for most people.
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 - For the feet odor detector, our initial design was only an indicator, but it could be improved with a feet cleaning or deodorizing functionality.   
@@ -328,7 +330,7 @@ To discriminate the nutrition of the dish on the table and show the red light if
 
 \*\***Include sketches of what your devices might look like here.**\*\*
 
-**Photo: Sketches**![](https://hackmd.io/_uploads/rykSUP70h.jpg)
+**Photo: Sketches**![Sketches](https://hackmd.io/_uploads/rykSUP70h.jpg)
 
 
 
