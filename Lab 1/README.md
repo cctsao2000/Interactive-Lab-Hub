@@ -247,3 +247,26 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
+
+Activity 1: A gate placed near to front doors that detects whether a key fob is brought by house owners when passing through the gate. A notification sound will be played if not.  
+Goal 1: To prevent house owners from going out without a key fob.
+
+Activity 2: A smart chair that can detect how long a person has been sitting on the chair for and will vibrate if the person has been sitting for too long.  
+Goal 2: To prevent the user from sitting on the chair for too long.
+
+Activity 3: An oil and stain detector in the kitchen that will shoot light to indicate the biggest stain found.  
+Goal 3: To make the kitchen cleaner and remove stains if possible
+
+Activity 4: Using emotion detection to integrate an inspiring quote generator  
+Goal 4: To heal people’s daily feelings
+
+Activity 5: Feet odor detection rug
+Goal 5: To remind you it’s time to wash your feet and avoid the awkward scenario  
+
+Activity 6: A tone detector to identify the extent of politeness for each sentence you speak  
+Goal 6: When the device detects that your blood pressure and heart rate have risen and your voice has become more emotional, the wristband will vibrate to warn you.
+
+Activity 7: Smart Table to detect the food type of each meal on the table for your health care  
+Goal 7: To discriminate the nutrition of the dish on the table and give you healthy meal advice
+
+
