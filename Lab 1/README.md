@@ -352,8 +352,11 @@ Opportunities:
 ## Part D. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
+
 **[Video: Smart chair](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/0c8d7822-dd23-4e9e-a6b4-48124fc1f647)**
+
 **[Video: Odor sensor](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/8360314b-d0b7-4c9d-9a9f-bb704f878882)**
+
 **[Video: Key fob notifier](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/855b8f77-1ee9-4481-9fa9-403f84d894e4)**
 
 
