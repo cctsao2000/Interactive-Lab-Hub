@@ -309,7 +309,8 @@ In a contemporary kitchen, John stands by a smart table filled with various meal
 ***Goal 7:***   
 To discriminate the nutrition of the dish on the table and show the red light if the food is not good for your health  
 
-\*\***Include pictures of your storyboards here**\*\*
+\*\***Include pictures of your storyboards here**\*\*  
+![Storyboards](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/dcd2635c-8454-4f1d-91b2-b7d260900c66)  
 
 \*\***Summarize feedback you got here.**\*\*  
 The idea of the smart table is great, but preferably you would want to have this feature before preparing the meal, otherwise you would be wasting the meal if you didn't end up eating it based on the nutrition information.
