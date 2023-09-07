@@ -84,7 +84,7 @@ while True:
     draw.text((x, y), WTTR, font=font, fill="#FFFF00")
     y += font.getsize(WTTR)[1]
     draw.text((x, y), USD, font=font, fill="#0000FF")
-    y += font.getsize(USD)[1]
+    y += font.getsize(USD)[1]*2 # times 2 for 2 lines height
     draw.text((x, y), Temp, font=font, fill="#FF00FF")
 
     # Display image.
