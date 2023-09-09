@@ -185,6 +185,9 @@ Option 3. A nowadays often preferred method is to use Microsoft [VS code to remo
 
 Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/latest) you can even setup a VS Code coding environment hosted on your raspberry pi and code through a web browser on your tablet or smartphone! 
 
+**Photo of the Clock Demo**  
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/71032c06-a43e-4d4b-a5ac-ebe5be04aab9" width="300"/>
+
 ## Part E.
 ### Modify the barebones clock to make it your own
 
