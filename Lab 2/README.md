@@ -201,7 +201,8 @@ Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
 
-\*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*
+\*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*  
+[Find My Code Here](own_clock.py)
 
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
@@ -216,12 +217,39 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 ## Part F. 
 ## Make a short video of your modified barebones PiClock
-
 \*\*\***Take a video of your PiClock.**\*\*\*
+
+**Switch between different modes**    
+Button A -> Study Mode  
+Button B -> Game Mode  
+Button A+B -> Return to Living Mode  
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/244474aa-91e3-4dbb-868f-54176b5351d5
+
+**Living Mode**  
+A stick man walks as the time flows. During 23:00 ~ 07:00, the stick man lies down, indicating it is bedtime.
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/87f4ae99-1d0f-46ae-8c69-99250f95987e
+
+
+**Study Mode**  
+Every time the user finishes a Pomodoro (i.e., 25 min work + 5 min break), the user wins a tomato.  
+(For demo purposes, I set the timer to 15 seconds of study time and 3 seconds of rest time.)
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/c866caa2-d578-4063-a36a-2bc1481cfb4d
+
+**Game Mode**  
+Users can use the tomato they earned to play the game. The goal of the game is to let the tomato hit the moving target.  
+Users can control the stick man to kick the tomato by pressing the lower button (Button B). The result (Hit/Miss) will be shown on the screen.
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-4d01-a173-8bf30e940a62
+
+
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-
+- The game is rather simple right now. I might consider randomizing the target moving speed.
+- Sound or other displaying effects can be added
 
 # Prep for Part 2
 
