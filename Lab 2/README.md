@@ -248,7 +248,7 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
-- The game is rather simple right now. I might consider randomizing the target moving speed.
+- The game is rather simple right now. I might consider randomizing the target moving speed to make the game harder.
 - Sound or other displaying effects can be added
 - Instead of collecting tomatoes, providing other targets like collecting water drops to water their own digital plant
 - Or asking the user for a certain amount of tomatoes every day to make pasta! (as the game's goal) 
