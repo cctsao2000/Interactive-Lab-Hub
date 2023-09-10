@@ -55,6 +55,6 @@ while True:
         display.fill(screenColor) # set the screen to the users color
     if buttonA.value and not buttonB.value:  # just button B pressed
         display.fill(color565(255, 255, 255))  # set the screen to white
-    if not buttonA.value and not buttonB.value:  # none pressed
+    if not buttonA.value and not buttonB.value:  # none pressed -> both pressed
         display.fill(color565(0, 255, 0))  # green
 
