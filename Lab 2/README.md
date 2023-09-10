@@ -1,5 +1,5 @@
 # Interactive Prototyping: The Clock of Pi
-**NAMES OF COLLABORATORS HERE**
+**Amber Tsao (ct649)**
 
 Does it feel like time is moving strangely during this semester?
 
@@ -185,6 +185,9 @@ Option 3. A nowadays often preferred method is to use Microsoft [VS code to remo
 
 Pro Tip: Using tools like [code-server](https://coder.com/docs/code-server/latest) you can even setup a VS Code coding environment hosted on your raspberry pi and code through a web browser on your tablet or smartphone! 
 
+**Photo of the Clock Demo**  
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/71032c06-a43e-4d4b-a5ac-ebe5be04aab9" width="300"/>
+
 ## Part E.
 ### Modify the barebones clock to make it your own
 
@@ -192,7 +195,8 @@ Does time have to be linear?  How do you measure a year? [In daylights? In midni
 
 Can you make time interactive? You can look in `screen_test.py` for examples for how to use the buttons.
 
-Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!
+Please sketch/diagram your clock idea. (Try using a [Verplank digram](http://www.billverplank.com/IxDSketchBook.pdf)!  
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/5a18c1f3-7359-43a5-ab5d-ceb706fd0a83" width="500"/>
 
 **We strongly discourage and will reject the results of literal digital or analog clock display.**
 
