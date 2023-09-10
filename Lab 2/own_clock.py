@@ -99,16 +99,31 @@ while True:
         draw.text((xs, ys), now_time, font=font, fill='white')
     
     elif mode == 1: #study
-        total = ((((now_hour - record_hour) * 60 + now_min) - record_min) * 60 + now_sec) - record_sec
-        remain_sec = 10 - total
+        x = -10
+        if study == "STUDY!":
+            r_sec = 10
+            total = ((((now_hour - record_hour) * 60 + now_min) - record_min) * 60 + now_sec) - record_sec
+            remain_sec = r_sec - total
+            if remain_sec == 0:
+                study = "REST!"
+                r_sec = 3
+                record_hour = now_hour
+                record_min = now_min
+                record_sec = now_sec
+        else:
+            r_sec = 3
+            total = ((((now_hour - record_hour) * 60 + now_min) - record_min) * 60 + now_sec) - record_sec
+            remain_sec = r_sec - total
+            if remain_sec == 0:
+                study = "STUDY!"
+                r_sec = 10
+                record_hour = now_hour
+                record_min = now_min
+                record_sec = now_sec
+                tomato_count += 1
+            
         xs = 100
         now_time = "{:02d}:{:02d}".format(divmod(remain_sec, 60)[0],divmod(remain_sec, 60)[1])
-        study = "STUDY!"
-        if remain_sec == 0:
-            tomato_count += 1
-            record_hour = now_hour
-            record_min = now_min
-            record_sec = now_sec
         draw.polygon([(25,12), (27, 20), (23,20)], fill=(0,255,0))
         draw.polygon([(15,15), (27, 20), (23,20)], fill=(0,255,0))
         draw.polygon([(35,15), (27, 20), (23,20)], fill=(0,255,0))
@@ -117,6 +132,8 @@ while True:
         action = "–"   
         
     else: #game
+        xs = 95
+        x = -10
         draw.polygon([(25,12), (27, 20), (23,20)], fill=(0,255,0))
         draw.polygon([(15,15), (27, 20), (23,20)], fill=(0,255,0))
         draw.polygon([(35,15), (27, 20), (23,20)], fill=(0,255,0))
@@ -131,17 +148,18 @@ while True:
             direction = -1
         if yt < 0:
             direction = 1
-        if tomato_count > 0:
-            if kick == 1:
-                while xt < 180:
-                    xt += 10
-            draw.polygon([(47+xt,102), (49+xt, 110), (45+xt,110)], fill=(0,255,0))
-            draw.polygon([(37+xt,105), (49+xt, 110), (45+xt,110)], fill=(0,255,0))
-            draw.polygon([(57+xt,105), (49+xt, 110), (45+xt,110)], fill=(0,255,0))
+        
+        if kick == 1:
+            xt += 10
             draw.ellipse((35+xt, 108, 60+xt, 125), outline=0, fill=400)
-            xt = 0
-            kick = 0
-                
+            if xt == 170:
+                if yt >= 90:
+                    now_time = "HIT"
+                else: 
+                    now_time = "MISS"
+            if xt > 180:
+                kick = 0
+                xt = 0
         
         
     # Draw a black filled box to clear the image. (should be red if fill=400)
@@ -152,6 +170,7 @@ while True:
         if mode == 1:
             mode = 1
         else:
+            study = "STUDY!"
             record_hour = now_hour
             record_min = now_min
             record_sec = now_sec
@@ -164,7 +183,6 @@ while True:
                 kick = 1
         else:
             mode = 2
-            record_sec = now_sec
     if not buttonA.value and not buttonB.value:  # both pressed
         mode = 0
                 
