@@ -101,22 +101,22 @@ while True:
     elif mode == 1: #study
         x = -10
         if study == "STUDY!":
-            r_sec = 10
+            r_sec = 1500
             total = ((((now_hour - record_hour) * 60 + now_min) - record_min) * 60 + now_sec) - record_sec
             remain_sec = r_sec - total
             if remain_sec == 0:
                 study = "REST!"
-                r_sec = 3
+                r_sec = 300
                 record_hour = now_hour
                 record_min = now_min
                 record_sec = now_sec
         else:
-            r_sec = 3
+            r_sec = 300
             total = ((((now_hour - record_hour) * 60 + now_min) - record_min) * 60 + now_sec) - record_sec
             remain_sec = r_sec - total
             if remain_sec == 0:
                 study = "STUDY!"
-                r_sec = 10
+                r_sec = 1500
                 record_hour = now_hour
                 record_min = now_min
                 record_sec = now_sec
