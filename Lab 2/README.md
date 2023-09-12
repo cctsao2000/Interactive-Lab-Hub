@@ -251,7 +251,10 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 - The game is rather simple right now. I might consider randomizing the target moving speed to make the game harder.
 - Sound or other displaying effects can be added
 - Instead of collecting tomatoes, providing other targets like collecting water drops to water their own digital plant
-- Or asking the user for a certain amount of tomatoes every day to make pasta! (as the game's goal) 
+  
+![noname](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/f58c02c9-b0b5-4dd9-aa30-108195b88fce)
+
+- Or asking the user for a certain amount of tomatoes every day to make pasta! (as the game's goal)
 
 # Prep for Part 2
 
