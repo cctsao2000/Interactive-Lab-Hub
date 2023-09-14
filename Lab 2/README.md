@@ -262,6 +262,10 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 
 - Or asking the user for a certain amount of tomatoes every day to make pasta! (as the game's goal)
 
+- Breakfast Clock: a clock that can recommend breakfast options based on the remaining breakfast time
+  
+![IMG_6133](https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/e8071098-7478-4555-9522-d73d6817f829)
+
 # Prep for Part 2
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
