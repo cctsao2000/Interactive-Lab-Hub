@@ -13,14 +13,14 @@
 #### On your computer 
 - Download the [Raspberry Pi Imager](https://www.raspberrypi.org/software/)
 - Download our copy of Raspbian at [this Cornell Box link](https://cornell.box.com/s/60k22dze3h7js9nt2hzse90bxwm9i1cc).
-Download and use the ``pi_image_09-05-23.zip`` file in the Raspberry Pi Imager.
+Download and use the ``pi_image_09-05-23.zip`` file directly in the Raspberry Pi Imager (do not unzip).
 
 - If using windows: [Windows 11 SSH Client](https://docs.microsoft.com/en-us/windows/terminal/tutorials/ssh), [PuTTY](https://www.putty.org/) or [VS Code SSH](https://code.visualstudio.com/learn/develop-cloud/ssh-lab-machines). 
 
 ### Setting up your OS for the Pi
 1. Plug the SD card into your computer using the card reader
 
-2. Go download and install the [Raspberry Pi Imager](https://www.raspberrypi.org/software/) on your laptop, download the the customed [image file](https://drive.google.com/file/d/1gPjAT3f9wx_zDGMp-tRjsLZzMrqa2LZ2/view?usp=sharing) we made for the class. Open the Raspberry Pi Imager and choose the downloaded image file from "Choose OS" and the SD card from "Choose SD card".
+2. Go download and install the [Raspberry Pi Imager](https://www.raspberrypi.org/software/) on your laptop, download the the customed image file we made for the class. Open the Raspberry Pi Imager and choose the downloaded image file from "Choose OS" and the SD card from "Choose SD card".
 
 <img src="https://github.com/FAR-Lab/Developing-and-Designing-Interactive-Devices/wiki/images/pi_imager_os_select.png" alt="choose os" height="200" />
 
@@ -58,7 +58,7 @@ Unlike your laptop, the Pi doesn't come with its own keyboard or mouse. While yo
 
 	The IP address is what you will need to SSH your Pi later through the same network. The media access control address (MAC address) is a unique identifier assigned to a network interface controller, you will need it later for registering the device if you are using Cornell network (e.g. RedRover). The NET shows which WiFi network your Pi is connected to.
 	
-	For MAC address: If you are planning to use Cornell network (e.g. RedRover and eduroam), you will have to register the device (your Pi) to the Cornell System to get it online. Please follow the instructions [here](https://it.cornell.edu/wifi-wired/register-device-doesnt-have-browser) from Cornell. If you are using the House network, you will need to register the device (your Pi) through [whitesky](https://myaccount.wscmdu.com/myaccount/devices). You might need to wait for a few minutes for your Pi to actually get online after registering it.
+	For MAC address: If you are planning to use Cornell network (e.g. RedRover and eduroam), you will have to register the device (your Pi) to the Cornell System to get it online. Please follow the instructions [here](https://it.cornell.edu/wifi-wired/register-device-doesnt-have-browser) from Cornell. To get the wifi mac address type `cat /sys/class/net/wlan0/address` in the terminal once looged in to you pi and verify its the same shown on the Pis screen. If you are using the House network, you will need to register the device (your Pi) through [whitesky](https://myaccount.wscmdu.com/myaccount/devices). You might need to wait for a few minutes for your Pi to actually get online after registering it.
 
 	*Note: Next to the screen are two buttons. We configured the top left button on this screen to shutdown your Pi. Do this before you disconnect the power source. 
 	The bottom left button is configured to reboot the Pi.*
