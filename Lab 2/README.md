@@ -239,7 +239,7 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/87f4ae99-1d0f-
 
 
 **Study Mode**  
-Every time the user finishes a Pomodoro (i.e., 25 min work + 5 min break), the user wins a tomato.  
+Every time the user finishes a [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) (i.e., 25 min work + 5 min break), the user wins a tomato.  
 (For demo purposes, I set the timer to 15 seconds of study time and 3 seconds of rest time.)
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/c866caa2-d578-4063-a36a-2bc1481cfb4d
@@ -272,6 +272,10 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
   
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
+
+Feedback:  
+- The concept of integrating the study timer and the game is really interesting  
+- Could include the snooze function in the breakfast clock  
 
 # Lab 2 Part 2
 
