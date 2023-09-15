@@ -273,9 +273,9 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
-Feedback:  
-- The concept of integrating the study timer and the game is really interesting  
-- Could include the snooze function in the breakfast clock  
+   Feedback:  
+    - The concept of integrating the study timer and the game is really interesting  
+    - Could include the snooze function in the breakfast clock  
 
 # Lab 2 Part 2
 
