@@ -297,7 +297,7 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-
 
 Video - click the button to see different breakfast combos  
 
-https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/a62050ec-fb86-457f-adb0-bbdf7e9d2fba
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b8508db2-aef2-4247-85f2-f8a1577260b8
 
 
 
