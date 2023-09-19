@@ -288,7 +288,7 @@ As always, make sure you document contributions and ideas from others explicitly
 Breakfast Clock Sketch  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b3d8544a-646c-4c7d-ba78-3986465700fa" width="500"/>
 
-Device - Home Page
+Device - Home Page  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/9d01a39e-9990-4baf-87ab-8a1bb151ff4e" width="500"/>
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
