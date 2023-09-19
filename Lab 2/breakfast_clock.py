@@ -57,6 +57,7 @@ bottom = height - padding
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("font/TahitiSansD.otf", 35)
 time_font = ImageFont.truetype("font/LemonDays.ttf", 50)
+br_font = ImageFont.truetype("font/LemonDays.ttf", 20)
 
 
 # these setup the code for our buttons and the backlight and tell the pi to treat the GPIO pins as digitalIO vs analogIO
@@ -70,12 +71,11 @@ buttonB.switch_to_input()
 
 x = 0
 y = top
-keyinput = "0840"
+keyinput = "0840" # default time
 displaytxt = ""
 font_color = "#FFFFFF"  
 mode = 0
-breakfast_option = {30:['Egg and Bacon', 'Pancake'], 20:['Egg'],10:['Yogurt','Bread', 'Cereal and Milk'], 5:['Banana', 'Milk', 'Cheese']}
-result = ""
+breakfast_option = {30:['breakfast'], 20:['omelette', 'sandwich'],10:['yogurt','toast', 'toasts', 'cereal', 'coffee'], 5:['bananas', 'milk', 'cheese', 'nuts']} 
 
 def checktime(timestr: str) -> bool:
     hourinput = int(timestr[0:2])
@@ -86,42 +86,57 @@ def checktime(timestr: str) -> bool:
         return True
 
 def breakfastchoice(remain_min):
-    if remain_min < 5:
-        choice = "Just GO!"
-    elif remain_min < 10:
-        choice = random.choice(breakfast_option[5])
-    elif remain_min < 20:
-        choice = random.choice(breakfast_option[10])
-    elif remain_min < 30:
-        choice = random.choice(breakfast_option[20])
-    else:
-        choice = random.choice(breakfast_option[30])
+    choice = []
+    time_left = remain_min
+    if time_left < 5 and len(choice) == 0:
+        choice.append("Just GO!")
+    while time_left >= 5:
+        if time_left < 10:
+            choice.append(random.choice(breakfast_option[5]))
+            time_left -= 5
+        elif time_left < 20:
+            choice.append(random.choice(breakfast_option[10]))
+            time_left -= 10
+        elif time_left < 30:
+            choice.append(random.choice(breakfast_option[20]))
+            time_left -= 20
+        else:
+            choice.append(random.choice(breakfast_option[30]))
+            time_left -= 30
     return choice
 
 while True:
+    now_time = time.strftime("%H:%M")
+    record_hour = int(keyinput[0:2])
+    record_min = int(keyinput[2:4])
+    now_hour = int(now_time[0:2])
+    now_min = int(now_time[3:5])
+    remain_min = (((record_hour - now_hour) * 60 + record_min) - now_min)
     if mode == 0: # main menu
         draw.rectangle((0, 0, width, height), outline=0, fill=000)
         draw.text((x+30, y+10), "Breakfast Clock", font=font, fill="#D9DCD6")        
-        now_time = time.strftime("%H:%M")
         draw.text((x+65, y+50), now_time, font=time_font, fill="#F3BA20")
     elif mode == 1: # recommend breakfast option
         draw.rectangle((0, 0, width, height), outline=0, fill=000)
-        record_hour = int(keyinput[0:2])
-        record_min = int(keyinput[2:4])
-        now_hour = int(now_time[0:2])
-        now_min = int(now_time[3:5])
-        remain_min = (((record_hour - now_hour) * 60 + record_min) - now_min)
         if now_hour > record_hour:
-            btr = "See You Nextday"
+            text = "See You Nextday"
+            draw.text((x+32, y+50), text, font=font, fill=font_color)
         else:
             btr = "BTR {:2d} min".format(remain_min)
-        draw.text((x+30, y+10), btr, font=font, fill=font_color)
-        draw.text((x+30, y+50), result, font=font, fill=font_color)
+            if len(result) != 0:
+                i = 0
+                while i < len(result):
+                    icon = Image.open('icon/{filename}.png'.format(filename=result[i]))
+                    icon = icon.resize((65, 65), Image.BICUBIC).convert("RGBA")
+                    image.paste(icon, (12+(78*i), 55))
+                    i += 1
+            draw.text((x+65, y+5), btr, font=font, fill=font_color)
+            # draw.text((x, y+50), result, font=br_font, fill=font_color)
         # draw.text((x+65, y+50), displaytxt, font=time_font, fill=font_color)
     else: # set when2breakfast
         draw.rectangle((0, 0, width, height), outline=0, fill=000)
-        myKeypad.update_fifo()  
-        button = myKeypad.get_button()
+        myKeypad.update_fifo() 
+        button = myKeypad.get_button() 
         charButton = chr(button)
         keyinput = keyinput[-4:]
         if button != 0:
@@ -142,11 +157,11 @@ while True:
         # Flush the stdout buffer to give immediate user feedback
         sys.stdout.flush()
     if buttonB.value and not buttonA.value:  # just button A pressed -> What to Eat
-        if mode == 1:
+        if mode == 1: # -> Switch options
             result = breakfastchoice(remain_min)
-            mode = 1 # -> Switch options
         else:
             mode = 1
+            result = breakfastchoice(remain_min)
     if buttonA.value and not buttonB.value:  # just button B pressed -> Set Time
         mode = 2
     if not buttonA.value and not buttonB.value:  # both pressed -> Home Page
