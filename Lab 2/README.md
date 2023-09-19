@@ -239,7 +239,7 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/87f4ae99-1d0f-
 
 
 **Study Mode**  
-Every time the user finishes a Pomodoro (i.e., 25 min work + 5 min break), the user wins a tomato.  
+Every time the user finishes a [Pomodoro](https://en.wikipedia.org/wiki/Pomodoro_Technique) (i.e., 25 min work + 5 min break), the user wins a tomato.  
 (For demo purposes, I set the timer to 15 seconds of study time and 3 seconds of rest time.)
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/c866caa2-d578-4063-a36a-2bc1481cfb4d
@@ -273,6 +273,10 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 
 2. Look at and give feedback on the Part G. for at least 2 other people in the class (and get 2 people to comment on your Part G!)
 
+   Feedback:  
+    - The concept of integrating the study timer and the game is really interesting  
+    - Could include the snooze function in the breakfast clock  
+
 # Lab 2 Part 2
 
 Pull Interactive Lab Hub updates to your repo.
@@ -280,6 +284,18 @@ Pull Interactive Lab Hub updates to your repo.
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
+
+Breakfast Clock Sketch  
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b3d8544a-646c-4c7d-ba78-3986465700fa" width="500"/>
+
+Device - Home Page  
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/9d01a39e-9990-4baf-87ab-8a1bb151ff4e" width="500"/>
+
+Video  
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-47aa-b271-ca52f206ec70
+
+
 
 You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
 
