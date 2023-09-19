@@ -295,7 +295,7 @@ As always, make sure you document contributions and ideas from others explicitly
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-47aa-b271-ca52f206ec70
 
-**Video** - click the button to see different breakfast combos  
+**Video** - click the button to see different breakfast combos (e.g., bread + milk, yogurt + bananas ...)  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b8508db2-aef2-4247-85f2-f8a1577260b8
 
