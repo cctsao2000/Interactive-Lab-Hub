@@ -291,9 +291,11 @@ Breakfast Clock Sketch
 Device - Home Page  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/9d01a39e-9990-4baf-87ab-8a1bb151ff4e" width="500"/>
 
-Video - click the button to see different breakfast combos
+Video - set time to go -> calculate remaining time for breakfast  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-47aa-b271-ca52f206ec70
+
+Video - click the button to see different breakfast combos  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/a62050ec-fb86-457f-adb0-bbdf7e9d2fba
 
