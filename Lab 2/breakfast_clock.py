@@ -123,12 +123,14 @@ while True:
             draw.text((x+32, y+50), text, font=font, fill=font_color)
         else:
             btr = "BTR {:2d} min".format(remain_min)
-            if len(result) != 0:
+            no_of_items = len(result)
+            if no_of_items != 0:
                 i = 0
-                while i < len(result):
+                space = int((240 - (65 * no_of_items)) / (no_of_items + 1))
+                while i < no_of_items:
                     icon = Image.open('icon/{filename}.png'.format(filename=result[i]))
                     icon = icon.resize((65, 65), Image.BICUBIC).convert("RGBA")
-                    image.paste(icon, (12+(78*i), 55))
+                    image.paste(icon, (space+((65+space)*i), 55))
                     i += 1
             draw.text((x+65, y+5), btr, font=font, fill=font_color)
             # draw.text((x, y+50), result, font=br_font, fill=font_color)
