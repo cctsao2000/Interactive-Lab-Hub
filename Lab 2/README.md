@@ -285,17 +285,17 @@ Modify the code from last week's lab to make a new visual interface for your new
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
-Breakfast Clock Sketch  
+**Breakfast Clock Sketch**  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b3d8544a-646c-4c7d-ba78-3986465700fa" width="500"/>
 
-Device - Home Page  
+**Device** - Home Page  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/9d01a39e-9990-4baf-87ab-8a1bb151ff4e" width="500"/>
 
-Video - set time to go -> calculate remaining time for breakfast  
+**Video** - set time to go -> calculate remaining time for breakfast  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-47aa-b271-ca52f206ec70
 
-Video - click the button to see different breakfast combos  
+**Video** - click the button to see different breakfast combos (e.g., bread + milk, yogurt + bananas ...)  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b8508db2-aef2-4247-85f2-f8a1577260b8
 
