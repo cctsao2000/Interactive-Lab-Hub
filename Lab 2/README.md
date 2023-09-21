@@ -291,13 +291,15 @@ As always, make sure you document contributions and ideas from others explicitly
 **Device** - Home Page  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/9d01a39e-9990-4baf-87ab-8a1bb151ff4e" width="500"/>
 
+**Video** - click the button to see different breakfast combos (e.g., bread + milk, yogurt + bananas ...)  
+
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/a962f005-9f37-49f7-9d59-e62b190979a6
+
 **Video** - set time to go -> calculate remaining time for breakfast  
 
 https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/584603c3-3036-47aa-b271-ca52f206ec70
 
-**Video** - click the button to see different breakfast combos (e.g., bread + milk, yogurt + bananas ...)  
 
-https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b8508db2-aef2-4247-85f2-f8a1577260b8
 
 
 
