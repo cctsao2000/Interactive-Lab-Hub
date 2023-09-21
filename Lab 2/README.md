@@ -264,8 +264,6 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/44a37b22-2061-
 
 - Breakfast Clock: a clock that can recommend breakfast options based on the remaining breakfast time
 
-<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/e8071098-7478-4555-9522-d73d6817f829" width="500"/>
-
 # Prep for Part 2
 
 1. Pick up remaining parts for kit on Thursday lab class. Check the updated [parts list inventory](partslist.md) and let the TA know if there is any part missing.
@@ -284,6 +282,9 @@ Pull Interactive Lab Hub updates to your repo.
 Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
+
+**Breakfast Clock Storyboard**
+<img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/e8071098-7478-4555-9522-d73d6817f829" width="500"/>
 
 **Breakfast Clock Sketch**  
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/b3d8544a-646c-4c7d-ba78-3986465700fa" width="500"/>
