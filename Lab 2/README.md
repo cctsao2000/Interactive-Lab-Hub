@@ -283,7 +283,7 @@ Modify the code from last week's lab to make a new visual interface for your new
 
 As always, make sure you document contributions and ideas from others explicitly in your writeup.
 
-**Breakfast Clock Storyboard**
+**Breakfast Clock Storyboard**    
 <img src="https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/e8071098-7478-4555-9522-d73d6817f829" width="500"/>
 
 **Breakfast Clock Sketch**  
