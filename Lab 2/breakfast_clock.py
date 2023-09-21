@@ -57,7 +57,7 @@ bottom = height - padding
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
 font = ImageFont.truetype("font/TahitiSansD.otf", 35)
 time_font = ImageFont.truetype("font/LemonDays.ttf", 50)
-br_font = ImageFont.truetype("font/LemonDays.ttf", 20)
+br_font = ImageFont.truetype("font/LemonDays.ttf", 40)
 
 
 # these setup the code for our buttons and the backlight and tell the pi to treat the GPIO pins as digitalIO vs analogIO
@@ -88,21 +88,30 @@ def checktime(timestr: str) -> bool:
 def breakfastchoice(remain_min):
     choice = []
     time_left = remain_min
-    if time_left < 5 and len(choice) == 0:
-        choice.append("Just GO!")
-    while time_left >= 5:
+    while time_left >= 5 and len(choice) < 3:
         if time_left < 10:
-            choice.append(random.choice(breakfast_option[5]))
-            time_left -= 5
+            br_item = random.choice(breakfast_option[5])
+            if br_item not in choice:
+                choice.append(br_item)
+                time_left -= 5
         elif time_left < 20:
-            choice.append(random.choice(breakfast_option[10]))
-            time_left -= 10
+            time_spent = random.choice([10,5])
+            br_item = random.choice(breakfast_option[time_spent])
+            if br_item not in choice:
+                choice.append(br_item)
+                time_left -= time_spent
         elif time_left < 30:
-            choice.append(random.choice(breakfast_option[20]))
-            time_left -= 20
+            time_spent = random.choice([20,10,5])
+            br_item = random.choice(breakfast_option[time_spent])
+            if br_item not in choice:
+                choice.append(br_item)
+                time_left -= time_spent
         else:
-            choice.append(random.choice(breakfast_option[30]))
-            time_left -= 30
+            time_spent = random.choice([30,20,10,5])
+            br_item = random.choice(breakfast_option[time_spent])
+            if br_item not in choice:
+                choice.append(br_item)
+                time_left -= time_spent
     return choice
 
 while True:
@@ -132,6 +141,8 @@ while True:
                     icon = icon.resize((65, 65), Image.BICUBIC).convert("RGBA")
                     image.paste(icon, (space+((65+space)*i), 55))
                     i += 1
+            else:
+                draw.text((x+30, 55), 'Just Go!', font=br_font, fill=font_color)
             draw.text((x+65, y+5), btr, font=font, fill=font_color)
             # draw.text((x, y+50), result, font=br_font, fill=font_color)
         # draw.text((x+65, y+50), displaytxt, font=time_font, fill=font_color)
