@@ -69,7 +69,7 @@ You can also play audio files directly with `aplay filename`. Try typing `aplay 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
 (This shell file should be saved to your own repo for this lab.)
 
-[**GoogleTTS_myname.sh**](GoogleTTS_myname.sh)
+[**GoogleTTS_myname.sh**](speech-scripts/GoogleTTS_myname.sh)
 
 ```
 #!/bin/bash
@@ -119,7 +119,7 @@ python test_microphone.py -m en
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
 
-[**own_sh.sh**](own_sh.sh)
+[**own_sh.sh**](speech-scripts/own_sh.sh)
 ```
 #!/bin/bash
 say() { local IFS=+;/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=$*&tl=en"; }
@@ -128,7 +128,7 @@ say "Please tell me your zip code"
 python speech-scripts/speech2num.py -m en
 ```
 
-[**speech2num.py**](speech2num.py)  
+[**speech2num.py**](speech-scripts/speech2num.py)  
 ```
 text2num_dict = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 
                  'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
