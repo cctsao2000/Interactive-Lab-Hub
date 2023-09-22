@@ -110,6 +110,39 @@ python test_microphone.py -m en
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
 
+**own_sh.sh**  
+```
+#!/bin/bash
+say() { local IFS=+;/usr/bin/mplayer -ao alsa -really-quiet -noconsolecontrols "http://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&q=$*&tl=en"; }
+#say $*
+say "Please tell me your zip code"
+python speech-scripts/speech2num.py -m en
+```
+
+**speech2num.py**  
+```
+text2num_dict = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 
+                 'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
+def text2num(num_list):
+    result = ""
+    for n in num_list:
+        try:
+            result += text2num_dict[n]
+        except KeyError:
+            continue
+    return result
+
+...
+
+while True:
+  data = q.get()
+  if rec.AcceptWaveform(data):
+      speech_detected = json.loads(rec.Result())
+      if list(speech_detected.keys())[0] == 'text':
+          print(text2num(speech_detected['text'].split()))
+  if dump_fn is not None:
+      dump_fn.write(data)
+```  
 
 ### Serving Pages
 
