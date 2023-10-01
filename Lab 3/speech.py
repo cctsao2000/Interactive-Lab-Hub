@@ -1,17 +1,28 @@
 from gtts import gTTS
 import os
-# import openai
-
+import openai
 import argparse
 import queue
 import sys
 import sounddevice as sd
 from vosk import Model, KaldiRecognizer
 import json
-import time
+import config
 
 q = queue.Queue()
 language = 'en'
+
+openai.api_key = config.api_key
+def get_chatgpt_res(content):
+    response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
+        {"role": "system", "content": "make it more polite"},
+        {"role": "user", "content": content}],
+        temperature=1,
+        max_tokens=256,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0)
+    return response.choices[0].message.content.strip()
 
 def int_or_str(text):
     """Helper function for argument parsing."""
@@ -26,21 +37,15 @@ def callback(indata, frames, time, status):
         print(status, file=sys.stderr)
     q.put(bytes(indata))
 
-text2num_dict = {'zero':'0', 'one':'1', 'two':'2', 'three':'3', 'four':'4', 
-                 'five':'5', 'six':'6', 'seven':'7', 'eight':'8', 'nine':'9'}
-def text2num(num_list):
-    result = ""
-    for n in num_list:
-        try:
-            result += text2num_dict[n]
-        except KeyError:
-            continue
-    return result
+played = 0
 
 def saythis(mytext):
     myobj = gTTS(text=mytext, lang=language, slow=False)
     myobj.save("content.mp3")
     os.system("mpg123 content.mp3")
+
+def speechmode():
+    return
 
 parser = argparse.ArgumentParser(add_help=False)
 parser.add_argument(
@@ -93,10 +98,13 @@ try:
             data = q.get()
             if rec.AcceptWaveform(data):
                 speech_detected = json.loads(rec.Result())
-                if list(speech_detected.keys())[0] == 'text':
-                    saythis(speech_detected['text'])
-                    time.sleep(5)
-                    # print(text2num(speech_detected['text'].split()))
+                if speech_detected['text'] == "hey":
+                    played = 0
+                elif played == 0:
+                    saythis(get_chatgpt_res(speech_detected['text']))
+                    played = 1
+                else:
+                    continue
             if dump_fn is not None:
                 dump_fn.write(data)
 
