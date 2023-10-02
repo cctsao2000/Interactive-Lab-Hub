@@ -13,10 +13,10 @@ q = queue.Queue()
 language = 'en'
 
 openai.api_key = config.api_key
-def get_chatgpt_res(content):
+def get_chatgpt_res(user_input):
     response = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[
         {"role": "system", "content": "make it more polite"},
-        {"role": "user", "content": content}],
+        {"role": "user", "content": user_input}],
         temperature=1,
         max_tokens=256,
         top_p=1,
