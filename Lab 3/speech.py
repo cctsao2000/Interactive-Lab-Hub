@@ -22,7 +22,7 @@ def get_chatgpt_res(content):
         top_p=1,
         frequency_penalty=0,
         presence_penalty=0)
-    return response.choices[0].message.content.strip()
+    return "To make it more polite, you can say: " + response.choices[0].message.content.strip()
 
 def int_or_str(text):
     """Helper function for argument parsing."""
