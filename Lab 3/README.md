@@ -242,9 +242,7 @@ Answer the following:
 \*\**your answer here*\*\*
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-
-\*\**your answer here*\*\*
-
+We used the Openai API to build the autonomous system. The most challenging part is to decide 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
