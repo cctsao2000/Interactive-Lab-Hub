@@ -18,6 +18,7 @@ greenlet==1.0.0
 itsdangerous==1.1.0
 Jinja2==2.11.3
 MarkupSafe==1.1.1
+openai
 PyAudio==0.2.11
 pyftdi==0.52.9
 pyserial==3.5
