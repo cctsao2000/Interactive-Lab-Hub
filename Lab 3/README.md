@@ -215,8 +215,20 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+Timing: For timing, we have to think about what would happen if the users did not speak for a long time. How would the system handle long pause or silence.
+
+Misunderstanding: It is highly plausible that the device might not be able to catch all the word precisely, but in the case if the device cannot decipher the user's speech, we should then be able to re-prompt the user to say their speech again.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+We may consider to incorporate camera as inputs in addition to speech. If we are trying to detect user's emotion, using computer vision via the camera, we can also evaluate people's state of emotion when they're inquiring the device with food recommendation. For instance, if the user seems to be angry or sad, we may want to offer more comfort food options for the users to pick from. Additionally, if the user seems confused or puzzled by the prompt, we can initiate the device to re-ask the prompt.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+Storyboard:
+
+![](https://hackmd.io/_uploads/Sk2zQpuxa.jpg)
 
 ## Prototype your system
 
@@ -226,8 +238,18 @@ The system should:
 * require participants to speak to it. 
 
 *Document how the system works*
+1) Run the speech.py file, make sure to pip install gTTS and OpenA first. 
+2) To initate a conversation, say 'hey'. This is similar to how people normally summon Siri.
+3) The user can try to say something rude or aggressive to the system. Ex. speech: "Can you shut up?"
+4) The system will respond, "To make it more polite from (original speech), you can (system suggested speech)."
 
-*Include videos or screencaptures of both the system and the controller.*
+Storyboard:  
+![](https://hackmd.io/_uploads/HyKMBTOgT.jpg)
+
+*Include videos or screen captures of both the system and the controller.*
+
+Videos:  
+
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -235,16 +257,30 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+To make sure our idea is brand new, we integrated the latest tool OpenAI API into our design. The ability to transform speech from impolite to polite was our central focus, which worked really well. One part that could've been done better is that more functions could be added. Our current design only contains one function, that is to reframe words into a more polite way. Potentially in the future, we can explore more functionalities. 
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+In order to simulate siri and alexa, we did not add functions to any buttons to make it seem smarter. But our current design could not handle consecutive queries for now, which is the part that should be further investigated. If this could not be solved afterwards, adding functions to make buttons as the controller to our system could be a solution.
+
+
+
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
-We used the Openai API to build the autonomous system. The most challenging part is to decide 
+
+We used the OpenAI API to build an autonomous system. The most challenging part is to decide the prompt to create a smooth interaction. For example, there are cases that chatGPT
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+How data could be collected:
+- We could gather data on user feedback and use it to improve the quality of responses.
+- Gather more data from users and calculate the average length of questions, then based on the result, adjust the default listening time to improve overall user experience.
 
+Other sensing modalities to capture: 
+- Emotional Tone (like IBM Watson “Tone Analyzer”)
+    - Positivity/negativity of the question asked
+
+- Facial Expression
+    - Detect user's emotion state by using camera to further analyze how the system can address the user
+- Extend of the Volume (dB)
