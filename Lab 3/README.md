@@ -250,6 +250,9 @@ Storyboard:
 
 Videos:  
 
+https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/fd85d695-298d-4a3f-9459-299b209cc3e0
+
+
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -264,12 +267,9 @@ To make sure our idea is brand new, we integrated the latest tool OpenAI API int
 
 In order to simulate siri and alexa, we did not add functions to any buttons to make it seem smarter. But our current design could not handle consecutive queries for now, which is the part that should be further investigated. If this could not be solved afterwards, adding functions to make buttons as the controller to our system could be a solution.
 
-
-
-
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-We used the OpenAI API to build an autonomous system. The most challenging part is to decide the prompt to create a smooth interaction. For example, there are cases that chatGPT
+We used the OpenAI API to build an autonomous system. The most challenging part is to decide the prompt to create a smooth interaction. For example, there are cases in which chatGPT is not able to revise users' sentences but instead replies to the users. This may be solved by adding a clearer prompt to the system.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
