@@ -257,19 +257,21 @@ https://github.com/cctsao2000/Interactive-Lab-Hub/assets/60999245/fd85d695-298d-
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
+Participants: Joanne Chen and Yichen
+
 Answer the following:
 
 ### What worked well about the system and what didn't?
 
-To make sure our idea is brand new, we integrated the latest tool OpenAI API into our design. The ability to transform speech from impolite to polite was our central focus, which worked really well. One part that could've been done better is that more functions could be added. Our current design only contains one function, that is to reframe words into a more polite way. Potentially in the future, we can explore more functionalities. 
+To make sure our idea is brand new, we integrated the latest tool OpenAI API into our design. The ability to transform speech from impolite to polite was our central focus, which worked really well. One part that could've been done better is that more functions could be added. Our current design only contains one function, that is to reframe words into a more polite way. One of our test user mentioned that the use case of the system is a little unclear. Potentially in the future, we can explore more functionalities. 
 
 ### What worked well about the controller and what didn't?
 
-In order to simulate siri and alexa, we did not add functions to any buttons to make it seem smarter. But our current design could not handle consecutive queries for now, which is the part that should be further investigated. If this could not be solved afterwards, adding functions to make buttons as the controller to our system could be a solution.
+The controller used in this design is OpenAI API. By sending the speech detected from the webcam as the request input then ouput the response of the reframed speech. Both Joanne and Yichen thought the stength of our design is that we built our system on top of one of the most powerful tools nowadays, so that our design can tackle different queries and always provide an response. However, Joanne also mentioned that this could also be a double-edge sword, if the server-side of OpenAI has broken down then this controller will not be able to work.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-We used the OpenAI API to build an autonomous system. The most challenging part is to decide the prompt to create a smooth interaction. For example, there are cases in which chatGPT is not able to revise users' sentences but instead replies to the users. This may be solved by adding a clearer prompt to the system.
+We used the OpenAI API to build an autonomous system. The most challenging part is to decide the prompt to create a smooth interaction. For example, there are cases that chatGPT is not able to revise users' sentences but instead reply the users. This may be solved by adding a clearer prompt to the system.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
