@@ -271,14 +271,14 @@ Think about how you want to present the information about what your sensor is se
 
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
-1) 
+1) How can we electrocute bugs using our sensor. This is an important consideration we have to think about.  
 2) If we need to press certain chord, we might have to precompute different combinations of string pressed in order to produce the right sound. 
-3) 
-4) If 
-5) If the hand-waving speed to create the gesture is too fast, the web camera module may not capture the precise gesture. We need to try the web camera
+3) We will need to ensure the accuracy of sensor detecting the region of what people see on the screen. For some task when user zoom out the screen, it would be difficult to identify the line of the user is reading.
+4) We need to ensure buttons touch the capbles when pressed and detach when released precisely. This will require physical prototyping for experiment.
+5) If the hand-waving speed to create the gesture is too fast, the web camera module may not capture the precise gesture. We need to try the web camera.
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
-We have chosen Guitar Player's design to integrate into our prototype
+We have chosen Guitar Player's design to integrate into our prototype.
 
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
@@ -292,8 +292,11 @@ Build a cardboard prototype of your design.
 
 ![](https://hackmd.io/_uploads/rknlj6N-a.jpg)
 
+![](https://hackmd.io/_uploads/B1I4r04Wa.jpg)
+*Due to lack of alligator cord, we will eventually have 6 in total
 
 
+[Video Demonstration](https://drive.google.com/file/d/1b6PvNt_pQ_SpFkxjWp-AeBqx6HSLBQua/view?usp=sharing)
 
 
 
@@ -301,7 +304,6 @@ Build a cardboard prototype of your design.
 For this setup, we used conductive copper tape as our strings (6 in total) and attached them to the cardboard, which serves as our "guitar neck". Once the user presses a specific cord/string, the musical note will be played correspondingly from the speaker attached to the back of the guitar neck. Additionally, the music note played will also get visually rendered from an external screen connected to the speaker.
 
 
-[Video Demonstration](https://drive.google.com/file/d/1b6PvNt_pQ_SpFkxjWp-AeBqx6HSLBQua/view?usp=sharing)
 
 
 LAB PART 2
