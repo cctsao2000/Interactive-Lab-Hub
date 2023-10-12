@@ -20,10 +20,11 @@ while True:
 		time.sleep(.005)
 		ToF.stop_ranging()
 
-		distanceInches = distance / 25.4
-		distanceFeet = distanceInches / 12.0
+		# distanceInches = distance / 25.4
+		# distanceFeet = distanceInches / 12.0
 
-		print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
+		print("Distance(mm): %s" % (distance))
+		# print("Distance(mm): %s Distance(ft): %s" % (distance, distanceFeet))
 
 	except Exception as e:
 		print(e)
