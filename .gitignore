@@ -3,4 +3,3 @@
 *.scorer
 venv
 config.py
-*.mp3
