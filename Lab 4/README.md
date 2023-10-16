@@ -367,9 +367,22 @@ The following resources are good starts on how to stream video:
 ### Record
 
 Document all the prototypes and iterations you have designed and worked on! Again, deliverables for this lab are writings, sketches, photos, and videos that show what your prototype:
-* "Looks like": shows how the device should look, feel, sit, weigh, etc.
-* "Works like": shows what the device can do
+
+* "Looks like": shows how the device should look, feel, sit, weigh, etc.  
+![](https://hackmd.io/_uploads/HJDDUf5bT.jpg)  
+![](https://hackmd.io/_uploads/SyKgOfqbT.jpg)  
+
+
+* "Works like": shows what the device can do  
+
+First Iteration:  
+[First Conceptual Video (Proof of Concept)](https://drive.google.com/file/d/1LcVcLfeNc05QQsU7a4y7S96cXneQIsF7/view?usp=sharing)
+
+
 * "Acts like": shows how a person would interact with the device
 
-[Video Demonstration](https://drive.google.com/file/d/1b6PvNt_pQ_SpFkxjWp-AeBqx6HSLBQua/view?usp=sharing)
+Final Outcome:   
+[Final Video Demo - Stroking Guitar](https://drive.google.com/file/d/1097kYwMXeLtI7FALEjN0PABsxGslsk2G/view?usp=sharing)  
+[Final Video Demo - Volume Adjustment](https://drive.google.com/file/d/194OoS1-NccoPSuwAX14XU9BKNmPbSwrb/view?usp=sharing)  
+* The volume adjustment video demonstrates lowering volume, but one can also increase volume through adjustment
 
