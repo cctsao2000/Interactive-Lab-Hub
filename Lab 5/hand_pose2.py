@@ -101,12 +101,12 @@ while True:
             cv2.putText(img, target, (40, 70), cv2.FONT_HERSHEY_COMPLEX,
                 1, (255, 255, 255), 3)
 
-        # else:
+        else:
  
-        #     vol = np.interp(length, [50, 300], [minVol, maxVol])
-        #     volBar = np.interp(length, [50, 300], [400, 150])
-        #     volPer = np.interp(length, [50, 300], [0, 100])
-        #     m.setvolume(int(vol))
+            vol = np.interp(length, [50, 300], [minVol, maxVol])
+            volBar = np.interp(length, [50, 300], [400, 150])
+            volPer = np.interp(length, [50, 300], [0, 100])
+            m.setvolume(int(vol))
 
         print(int(length), vol)
 
