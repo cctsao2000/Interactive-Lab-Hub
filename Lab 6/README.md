@@ -187,6 +187,7 @@ Changing Color-> the color information will be sent to MQTT Explorer as shown be
 (A message from the previous TA, Ilan: I was not super careful with handling the loop so you may need to press more than once if the timing isn't quite right. Also, I haven't load-tested it so things might just immediately break when everyone pushes the button at once.)
 
 **\*\*\*Can you set up the script that can read the color anyone else publish and display it on your screen?\*\*\***
+[Video Demo: Change color across all devices through MQTT](https://drive.google.com/file/d/1eBdF5KNCynUMlMxGFN5zLP9-voar4Gzv/view?usp=sharing)
 
 
 
@@ -204,8 +205,11 @@ This design utilizes camera to detect user hand pose for what number they would 
 ![S__12877957](https://hackmd.io/_uploads/B1gTEN1Vp.jpg)
 
 **\*\*\*3. Build a working prototype of the system.\*\*\*** Do think about the user interface: if someone encountered these bananas somewhere in the wild, would they know how to interact with them? Should they know what to expect?
+- Making sure the user interface (via the Terminal console) will showcase the synced results based on user's gesture in accurate, timely manner 
 
 **\*\*\*4. Document the working prototype in use.\*\*\*** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
+[Video Demo: Voting System](https://drive.google.com/file/d/17zr7aMg4jYNKH2DIuwPHKrXbXjNUIgsC/view?usp=sharing
+)
 
 <!--**\*\*\*5. BONUS (Wendy didn't approve this so you should probably ignore it)\*\*\*** get the whole class to run your code and make your distributed system BIGGER.-->
 
