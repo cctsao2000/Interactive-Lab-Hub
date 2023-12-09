@@ -110,4 +110,5 @@ mediapipe
 pyalsaaudio
 teachable-machine-lite
 sparkfun-qwiic-button
+pygame
 
