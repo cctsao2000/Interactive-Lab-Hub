@@ -8,11 +8,7 @@ import board
 import busio
 from adafruit_seesaw import seesaw, rotaryio
 import digitalio
-<<<<<<< HEAD
 from PIL import Image, ImageDraw #, ImageFont, ImageSequence
-=======
-from PIL import Image, ImageDraw  # , ImageFont, ImageSequence
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 import adafruit_mpr121
 import adafruit_rgb_display.st7789 as st7789
 import qwiic_button  # sudo pip install sparkfun-qwiic-button
@@ -121,7 +117,6 @@ volBar = 400
 volPer = 0
 
 conditions = {
-<<<<<<< HEAD
             (True, True, False, False, False): "play/pause",  #1
             (True, True, True, False, False): "next",         #2
             (True, True, True, True, True): "prev"            #3
@@ -149,40 +144,6 @@ backgrounds =  [Image.open("backgrounds/Light.png").resize((width,height)),
                 Image.open("backgrounds/Retro.png").resize((width,height)), 
                 Image.open("backgrounds/Sunset.png").resize((width,height))
                 ]
-=======
-    (True, True, False, False, False): "play/pause",  # 1
-    (True, True, True, False, False): "next",  # 2
-    (True, True, True, True, True): "prev",  # 3
-}
-
-genres = ["pop", "r&b", "kpop", "dance"]
-
-playList = {
-    "pop": [
-        "Justin Bieber - Peaches ft. Daniel Caesar, Giveon",
-        "Kehlani - Gangsta (Audio)",
-        "Rihanna - Umbrella (Lyrics) ft. JAY-Z",
-    ],
-    "r&b": [
-        "H.E.R - Come Through ft. Chris Brown (Lyrics)",
-        "John Mayer - New Light (Lyrics)",
-        "Sasha Sloan - Dancing With Your Ghost (Lyrics)",
-    ],
-    "kpop": ["ENHYPEN - Sweet Venom", "IVE_LOVE DIVE", "NewJeans - Ditto"],
-    "dance": [
-        "Sam Smith - Unholy (Lyrics) ft. Kim Petras",
-        "SZA-Snooze-_Audio_",
-        "Tyla Water - Official Audio",
-    ],
-}
-
-backgrounds = [
-    Image.open("backgrounds/Light.png").resize((width, height)),
-    Image.open("backgrounds/Mountain.png").resize((width, height)),
-    Image.open("backgrounds/Retro.png").resize((width, height)),
-    Image.open("backgrounds/Sunset.png").resize((width, height)),
-]
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 curGenre = curSongNumber = curBackground = 0
 paused = False
@@ -194,70 +155,40 @@ lastVolPosition = -encoder.position
 
 def playSong(genre, song_number):
     global playing, paused
-<<<<<<< HEAD
     pygame.mixer.music.load(f"songGenre/{genres[genre]}/{playList[genres[genre]][song_number]}.wav")
     pygame.mixer.music.play()
     playing = True
     paused = False
-=======
-    pygame.mixer.music.load(
-        f"songGenre/{genres[genre]}/{playList[genres[genre]][song_number]}.wav"
-    )
-    pygame.mixer.music.play()
-    playing = True
-    paused = False
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 def pauseSong():
     global paused
     pygame.mixer.music.pause()
     print("Music Paused")
     paused = not paused
-<<<<<<< HEAD
     
-=======
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 def unpauseSong():
     global paused
     pygame.mixer.music.unpause()
     print("Music Unpaused")
     paused = not paused
-<<<<<<< HEAD
-=======
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 def stopSong():
     global playing
     pygame.mixer.music.stop()
     print("Music Stopped")
     playing = False
-<<<<<<< HEAD
     
 
 def setVolume(vol):
     curVol = pygame.mixer.music.get_volume()
     curVol += (vol / 100)
-=======
-
-
-def setVolume(vol):
-    curVol = pygame.mixer.music.get_volume()
-    curVol += vol / 100
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
     if curVol < 0:
         curVol = 0
     if curVol > 1:
         curVol = 1
     pygame.mixer.music.set_volume(curVol)
     print(f"Current volume: {round(curVol * 100, 2)}%")
-<<<<<<< HEAD
-=======
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 def nextSong():
     global curSongNumber
@@ -266,12 +197,7 @@ def nextSong():
     stopSong()
     playSong(curGenre, curSongNumber)
     print("Next Song")
-<<<<<<< HEAD
      
-=======
-
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 def prevSong():
     global curSongNumber
     curSongNumber -= 1
@@ -279,21 +205,12 @@ def prevSong():
     stopSong()
     playSong(curGenre, curSongNumber)
     print("Prev Song")
-<<<<<<< HEAD
      
-=======
-
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 def detectAction(action):
     global paused, playing
     if action == "play/pause":
         if not playing:
-<<<<<<< HEAD
            playSong(curGenre, curSongNumber)
-=======
-            playSong(curGenre, curSongNumber)
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
         elif not paused:
             pauseSong()
         else:
@@ -308,65 +225,37 @@ def detectAction(action):
 def checkBackground():
     global curBackground
     if qwiicButton.is_button_pressed():
-<<<<<<< HEAD
        curBackground += 1
        curBackground %= N_BACKGROUNDS
        print("Background changed")
     
-=======
-        curBackground += 1
-        curBackground %= N_BACKGROUNDS
-        print("Background changed")
-
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 def checkGenre():
     global curGenre, curSongNumber
     try:
         for i in range(N_GENRE):
             if mpr121[i].value:
-<<<<<<< HEAD
                 if i != curGenre: 
-=======
-                if i != curGenre:
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
                     curGenre = i
                     curSongNumber = 0
                     print(f"Changed to {genres[i]} genre")
                     playSong(curGenre, curSongNumber)
                 else:
-<<<<<<< HEAD
                     print(f"Already playing {genres[i]} genre") 
                 break
     except IOError as e:
         return
-=======
-                    print(f"Already playing {genres[i]} genre")
-                break
-    except IOError as e:
-        return
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 def checkVolume():
     global lastVolPosition
     try:
         position = -encoder.position
-<<<<<<< HEAD
         if position or lastVolPosition == 2147483648:
             pygame.mixer.music.set_volume(1.0)
         elif position != lastVolPosition:
-=======
-        if position != lastVolPosition:
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
             setVolume(position - lastVolPosition)
             lastVolPosition = position
     except IOError as e:
         return
-<<<<<<< HEAD
-=======
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
 ################################
 frame_cnt = 0
@@ -380,7 +269,6 @@ while True:
 
     display_image = backgrounds[curBackground].copy()
     draw_on_image = ImageDraw.Draw(display_image)
-<<<<<<< HEAD
     
     draw_on_image.text((10, 10), playList[genres[curGenre]][curSongNumber], fill="#f41f1f")  # might need to assign font
     draw_on_image.text((55, 40), str(pygame.mixer.music.get_pos()), fill="#f41f1f")  # might need to assign font 
@@ -395,38 +283,13 @@ while True:
     
             thumbX, thumbY = lmList[4][1], lmList[4][2] #thumb
             pointerX, pointerY = lmList[8][1], lmList[8][2] #pointer
-=======
-
-    draw_on_image.text(
-        (10, 10), playList[genres[curGenre]][curSongNumber], fill="#f41f1f"
-    )  # might need to assign font
-    draw_on_image.text(
-        (55, 40), str(pygame.mixer.music.get_pos()), fill="#f41f1f"
-    )  # might need to assign font
-
-    success, img = cap.read()
-    if frame_cnt % 5 == 0:
-        img = detector.findHands(img)
-        lmList = detector.findPosition(img, draw=False)
-        end_time = time.time()
-
-        if len(lmList) != 0:
-            thumbX, thumbY = lmList[4][1], lmList[4][2]  # thumb
-            pointerX, pointerY = lmList[8][1], lmList[8][2]  # pointer
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
 
             middleX, middleY = lmList[12][1], lmList[12][2]
             ringX, ringY = lmList[16][1], lmList[16][2]
             pinkyX, pinkyY = lmList[20][1], lmList[20][2]
-<<<<<<< HEAD
             
             cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
     
-=======
-
-            cx, cy = (thumbX + pointerX) // 2, (thumbY + pointerY) // 2
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
             cv2.circle(img, (thumbX, thumbY), 15, (255, 0, 255), cv2.FILLED)
             cv2.circle(img, (pointerX, pointerY), 15, (255, 0, 255), cv2.FILLED)
             cv2.circle(img, (middleX, middleY), 15, (255, 0, 255), cv2.FILLED)
@@ -435,7 +298,6 @@ while True:
             cv2.line(img, (thumbX, thumbY), (pointerX, pointerY), (255, 0, 255), 3)
             cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
 
-<<<<<<< HEAD
             len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
             length = len_calc(thumbX,thumbY,pointerX,pointerY)
             length1 = len_calc(pointerX,pointerY,middleX,middleY)
@@ -445,23 +307,6 @@ while True:
 
             key = (length>100, length1>100, length2>100, length3>100, length4>100)
             
-=======
-            len_calc = lambda x1, y1, x2, y2: math.hypot(x2 - x1, y2 - y1)
-            length = len_calc(thumbX, thumbY, pointerX, pointerY)
-            length1 = len_calc(pointerX, pointerY, middleX, middleY)
-            length2 = len_calc(middleX, middleY, ringX, ringY)
-            length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
-            length4 = len_calc(thumbX, thumbY, ringX, ringY)
-
-            key = (
-                length > 100,
-                length1 > 100,
-                length2 > 100,
-                length3 > 100,
-                length4 > 100,
-            )
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
             # One operation within per 5 seconds
             if end_time - start_time > 5:
                 if key in conditions:
@@ -473,7 +318,6 @@ while True:
 
         cv2.rectangle(img, (50, 150), (85, 400), (255, 0, 0), 3)
         cv2.rectangle(img, (50, int(volBar)), (85, 400), (255, 0, 0), cv2.FILLED)
-<<<<<<< HEAD
         cv2.putText(img, f'{int(volPer)} %', (40, 450), cv2.FONT_HERSHEY_COMPLEX,
                     1, (255, 0, 0), 3)
         
@@ -487,35 +331,6 @@ while True:
         if cv2.waitKey(1) & 0xFF == ord('q'):  # Press 'q' to quit
             break
         
-=======
-        cv2.putText(
-            img,
-            f"{int(volPer)} %",
-            (40, 450),
-            cv2.FONT_HERSHEY_COMPLEX,
-            1,
-            (255, 0, 0),
-            3,
-        )
-
-        cTime = time.time()
-        fps = 1 / (cTime - pTime)
-        pTime = cTime
-        cv2.putText(
-            img,
-            f"current playing: {playList[genres[curGenre]][curSongNumber]}",
-            (40, 50),
-            cv2.FONT_HERSHEY_COMPLEX,
-            1,
-            (255, 0, 0),
-            3,
-        )
-
-        cv2.imshow("Img", img)
-        if cv2.waitKey(1) & 0xFF == ord("q"):  # Press 'q' to quit
-            break
-
->>>>>>> a6a073a76e2a6db8c763bc48da8cf1831f84daca
     # Display image
     disp.image(display_image, rotation)
     frame_cnt += 1
