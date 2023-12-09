@@ -8,11 +8,12 @@ import board
 import busio
 from adafruit_seesaw import seesaw, rotaryio
 import digitalio
-from PIL import Image, ImageDraw #, ImageFont, ImageSequence
+from PIL import Image, ImageDraw, ImageFont #, ImageSequence
 import adafruit_mpr121
 import adafruit_rgb_display.st7789 as st7789
 import qwiic_button  # sudo pip install sparkfun-qwiic-button
 from ctypes import cast, POINTER
+import os
 
 # import alsaaudio
 # m = alsaaudio.Mixer(control='Speaker', cardindex=3)
@@ -132,10 +133,10 @@ playList = {
                     "John Mayer - New Light (Lyrics)", 
                     "Sasha Sloan - Dancing With Your Ghost (Lyrics)"],
             "kpop": ["ENHYPEN - Sweet Venom", 
-                     "IVE_LOVE DIVE", 
+                     "IVE - LOVE DIVE", 
                      "NewJeans - Ditto"],
             "dance": ["Sam Smith - Unholy (Lyrics) ft. Kim Petras", 
-                      "SZA-Snooze-_Audio_", 
+                      "SZA - Snooze-_Audio_", 
                       "Tyla Water - Official Audio"]
             }
 
@@ -188,6 +189,7 @@ def setVolume(vol):
     if curVol > 1:
         curVol = 1
     pygame.mixer.music.set_volume(curVol)
+    # os.system(f"amixer sset 'Master' {curVol * 100}%")
     print(f"Current volume: {round(curVol * 100, 2)}%")
 
 def nextSong():
@@ -249,9 +251,8 @@ def checkVolume():
     global lastVolPosition
     try:
         position = -encoder.position
-        if position or lastVolPosition == 2147483648:
-            pygame.mixer.music.set_volume(1.0)
-        elif position != lastVolPosition:
+        print(position)
+        if position != lastVolPosition:
             setVolume(position - lastVolPosition)
             lastVolPosition = position
     except IOError as e:
@@ -261,7 +262,7 @@ def checkVolume():
 frame_cnt = 0
 start_time = time.time()
 pygame.mixer.music.set_volume(1.0)
-
+font = ImageFont.truetype("font/SundayGrapes.ttf", size=20)
 while True:
     checkGenre()
     checkBackground()
@@ -269,9 +270,11 @@ while True:
 
     display_image = backgrounds[curBackground].copy()
     draw_on_image = ImageDraw.Draw(display_image)
+    split_song_name = playList[genres[curGenre]][curSongNumber].split(' - ')
     
-    draw_on_image.text((10, 10), playList[genres[curGenre]][curSongNumber], fill="#f41f1f")  # might need to assign font
-    draw_on_image.text((55, 40), str(pygame.mixer.music.get_pos()), fill="#f41f1f")  # might need to assign font 
+    draw_on_image.text((10, 10), split_song_name[0], fill="#fff", font=font)  # might need to assign font
+    draw_on_image.text((10, 30), split_song_name[1], fill="#fff", font=font)  # might need to assign font
+    draw_on_image.text((55, 60), str(pygame.mixer.music.get_pos()), fill="#fff")  # might need to assign font 
     
     success, img = cap.read()
     if frame_cnt % 2 == 0:
