@@ -1,6 +1,5 @@
 import cv2
 import time
-import numpy as np
 import HandTrackingModule as htm
 import math
 import pygame
@@ -13,7 +12,6 @@ from PIL import Image, ImageDraw, ImageFont #, ImageSequence
 import adafruit_mpr121
 import adafruit_rgb_display.st7789 as st7789
 import qwiic_button  # sudo pip install sparkfun-qwiic-button
-from ctypes import cast, POINTER
 import os
 
 TOPIC = "IDD/playList"
@@ -101,13 +99,12 @@ volBar = 213
 volPer = 75
 
 conditions = {
-            (True, True, False, False, False): "play/pause", #1
-            (True, False, True, False, False): "next", #2
-            (True, True, True, False, False): "next", #2
-            (False, False, True, False, False): "next", #2
-            (True, False, False, True, True): "prev", #3
-            (True, True, False, True, True): "prev",   #3
-            (True, False, False, True, False): "prev" #3
+            (True, False, False, False): "play/pause", #1
+            (True, False, True, True): "play/pause", #1
+            (True, False, False, True): "play/pause", #1
+            (True, False, True, False): "play/pause", #1
+            (True, True, False, False): "next", #2
+            (True, True, True, False): "prev" #3
             }
 
 genres = ["pop", "r&b", "kpop","dance"]
@@ -308,16 +305,15 @@ while True:
             # cv2.circle(img, (cx, cy), 15, (255, 0, 255), cv2.FILLED)
 
             len_calc = lambda x1,y1,x2,y2: math.hypot(x2 - x1, y2 - y1)
-            length = len_calc(thumbX,thumbY,pointerX,pointerY)
-            length1 = len_calc(pointerX,pointerY,middleX,middleY)
-            length2 = len_calc(middleX, middleY, ringX, ringY)
-            length3 = len_calc(ringX, ringY, pinkyX, pinkyY)
-            length4 = len_calc(thumbX,thumbY, ringX, ringY)
-
-            key = (length>100, length1>100, length2>100, length3>100, length4>100)
+            length = len_calc(thumbX, thumbY, pointerX, pointerY)
+            length1 = len_calc(thumbX, thumbY, middleX, middleY)
+            length2 = len_calc(thumbX, thumbY, ringX, ringY)
+            length3 = len_calc(thumbX, thumbY, pinkyX, pinkyY)
+            base = min([length, length1, length2, length3]) * 2
+            key = (length>base, length1>base, length2>base, length3>base)
             # One operation within per 3 seconds
             if end_time - start_time > 3:
-                print(key)
+                # print(key)
                 if key in conditions:
                     detectAction(conditions[key])
                 start_time = time.time()
