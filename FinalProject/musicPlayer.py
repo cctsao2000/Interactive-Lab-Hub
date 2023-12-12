@@ -134,14 +134,15 @@ curGenre = curSongNumber = curBackground = 0
 paused = False
 playing = False
 lastVolPosition = -encoder.position
+initsongtime = -1
 
 ################################
 
-
 def playSong(genre, song_number):
-    global playing, paused
+    global playing, paused, initsongtime
     pygame.mixer.music.load(f"songGenre/{genres[genre]}/{playList[genres[genre]][song_number]}.wav")
     pygame.mixer.music.play()
+    initsongtime = pygame.mixer.music.get_pos()
     playing = True
     paused = False
 
@@ -267,6 +268,7 @@ start_time = time.time()
 pygame.mixer.music.set_volume(0.75)
 vol_change = 0
 font = ImageFont.truetype("font/SundayGrapes.ttf", size=20)
+time_font = ImageFont.truetype("font/SundayGrapes.ttf", size=38)
 while True:
     checkGenre()
     checkBackground()
@@ -278,8 +280,10 @@ while True:
     
     draw_on_image.text((10, 10), split_song_name[0], fill="#fff", font=font)  # might need to assign font
     draw_on_image.text((10, 30), split_song_name[1], fill="#fff", font=font)  # might need to assign font
-    draw_on_image.text((55, 60), str(pygame.mixer.music.get_pos()), fill="#fff")  # might need to assign font 
-    
+    played_millis = pygame.mixer.music.get_pos()-initsongtime // 1000
+    seconds = int((played_millis / 1000) % 60)
+    minutes = int((played_millis / (1000 * 60)) % 60)
+    draw_on_image.text((55, 62), '{:02d}:{:02d}'.format(minutes, seconds), fill="#fff", font=time_font)  # might need to assign font 
     success, img = cap.read()
     if frame_cnt % 2 == 0:
         img = detector.findHands(img)
