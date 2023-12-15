@@ -102,16 +102,16 @@ On the left side of the device, the user could see the MiniPiTFT displaying the 
 On the right side of the device, the user could rotate the Rotary Encoder to control the volume of playing music. Once user rotates toward the right side can volume up and vice versa.
 
 
-TOP VIEW
-![S__26320908](https://hackmd.io/_uploads/BJqOaHI86.jpg)
+TOP VIEW  
+![S__26320908](https://hackmd.io/_uploads/BJqOaHI86.jpg)  
 The user is able to select which genre of music they would like to listen to, from Dance, K-pop, R&B, and Pop. Once the user makes a selection, the music player will automatically start playing a song from the selected genre.
 
-COMPUTER VIEW
-![IMG_3C658F6338FD-1](https://hackmd.io/_uploads/B1fLPDUUT.jpg)
+COMPUTER VIEW  
+![IMG_3C658F6338FD-1](https://hackmd.io/_uploads/B1fLPDUUT.jpg)  
 On the computer screen, the user is able to see what the camera is capturing of their gesture. In addition, the user can see the text output of their actions. For example, if they use the "1" gesture, the display will show whether the song is paused or unpaused. The user is able to know the state of the program. 
  
-**Final Video**
-[Interaction Video](https://drive.google.com/file/d/12u2BBvKE4nnI54TFaM40LYKrBi_T9HjB/view?usp=sharing)
+**Final Video**  
+[Interaction Video](https://drive.google.com/file/d/12u2BBvKE4nnI54TFaM40LYKrBi_T9HjB/view?usp=sharing)  
 In the video shows a user interacting with the music player with hand gesture. The user first holds up "1" gesture to unpause or pause the song. When the music start playing, the MiniPiTFT will show the name of the song name, artist name, and playing time. After that he user holds up "2" gesture to play the next song. Then the user holds up "3" gesture to play the previous song.
 
 For changing 4 available genres (from left to right: Dance, Kpop, R&B, Pop) of the playing song, the user clicks the 4 sensors on top.
