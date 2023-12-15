@@ -1,6 +1,8 @@
 # IDD Final Project - Music Player 
 Amber Tsao (ct649), Aris Huang (th625), Julia Lin (jtl236), Sherri Lin (yl3658), Wayne Cheng (cc2796), Ifeng Wu (iw84)
 
+[Link to the Final Project Folder](https://github.com/cctsao2000/Interactive-Lab-Hub/tree/Fall2023/FinalProject)
+
 **Project Plan**
 
 **Big Idea**
